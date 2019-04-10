@@ -1,0 +1,25 @@
+<?xml version="1.0" encoding="utf-8"?>
+<resources>
+    <declare-styleable name="MyRatingBar">
+        <!--单个星星的宽度-->
+        <attr name="starWihth" format="dimension"></attr>
+
+        <!--单个星星的高度-->
+        <attr name="starHeight" format="dimension"></attr>
+
+        <!--星星的数量-->
+        <attr name="starNum" format="integer"></attr>
+
+        <!--未选中的时候星星的样式-->
+        <attr name="starNoSelect" format="reference"/>
+        
+        <!--选中的时候星星的样式-->
+        <attr name="starSelect" format="reference"/>
+
+        <!--是否是一个指示器-->
+        <attr name="isIndicator" format="boolean"/>
+        
+        <!--星星之间的间距-->
+        <attr name="starDistance" format="dimension"/>
+    </declare-styleable>
+</resources>
