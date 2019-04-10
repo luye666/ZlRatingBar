@@ -72,12 +72,12 @@ public class MyRatingBar extends LinearLayout {
         typedArray.recycle();
 
 //        设置星星的宽高
-//        int starWidth = (int) Math.max(mStarWidth, mStarHeight);
-//        if (starWidth > 0) {
-////            对星星进行重置
-//            mSelectStar = resetBitmap(mSelectStar, starWidth);
-//            mStarNorol = resetBitmap(mStarNorol, starWidth);
-//        }
+        int starWidth = (int) Math.max(mStarWidth, mStarHeight);
+        if (starWidth > 0) {
+//            对星星进行重置
+            mSelectStar = resetBitmap(mSelectStar, starWidth);
+            mStarNorol = resetBitmap(mStarNorol, starWidth);
+        }
 
     }
 
@@ -119,6 +119,10 @@ public class MyRatingBar extends LinearLayout {
     // TODO: 2019/4/10 事件的处理
     @Override
     public boolean onTouchEvent(MotionEvent event) {
+
+        if (isIndicator) {
+            return true;
+        }
         float x = event.getX();
         if (x < 0) x = 0;
         if (x > getMeasuredWidth()) x = getMeasuredWidth();
