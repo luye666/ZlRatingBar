@@ -21,5 +21,8 @@
         
         <!--星星之间的间距-->
         <attr name="starDistance" format="dimension"/>
+
+        <!--选中的星星的数量-->
+        <attr name="starSelectNum" format="integer"/>
     </declare-styleable>
 </resources>
